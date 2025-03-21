@@ -39,11 +39,19 @@ describe("String Calculator", () => {
     expect(add("//[***]\n1***2***3")).toBe(6);
   });
 
-  test("should support multiple delimiters", () => {
+  test("should support multiple delimiters of length equal to 2", () => {
     expect(add("//[*][%]\n1*2%3")).toBe(6);
+  });
+
+  test("should support multiple delimiters of length greater than 2", () => {
+    expect(add("//[*][%][-]\n1*2%3-5")).toBe(11);
   });
 
   test("should support multiple delimiters with multiple characters", () => {
     expect(add("//[***][%%%]\n1***2%%%3")).toBe(6);
+  });
+
+  test("should support multiple delimiters with multiple characters and length greater than 2", () => {
+    expect(add("//[***][%%%][--]\n1***2%%%3--5")).toBe(11);
   });
 });
