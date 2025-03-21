@@ -20,7 +20,7 @@ A JavaScript implementation of the String Calculator kata. This project demonstr
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone git@github.com:arun143420/tdd-string-calculator.git 
 cd tdd-string-calculator
 ```
 
